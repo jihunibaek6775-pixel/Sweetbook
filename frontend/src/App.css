@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+}
+
+.app-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.app-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0ea5e9;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.app-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 32px 0;
+}
+
+/* 기록 추가 폼 */
+.form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f1f3;
+  margin-bottom: 24px;
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #1f2937;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.file-input-label {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #f8fafc;
+  border: 2px dashed #0ea5e9;
+  border-radius: 10px;
+  text-align: center;
+  color: #0ea5e9;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.file-input-label:hover {
+  background: #ecf7ff;
+  border-color: #0084d9;
+}
+
+.file-input {
+  display: none;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1f2937;
+  resize: none;
+  outline: none;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.textarea:focus {
+  border-color: #0ea5e9;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #0ea5e9;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #0284c7;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.btn-primary:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 기록 목록 */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #1f2937;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.empty-text {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 32px 0;
+}
+
+.record-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f1f3;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.2s;
+}
+
+.record-card:hover {
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+  border-color: #0ea5e9;
+}
+
+.record-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #0ea5e9;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.record-photo {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.record-info {
+  flex: 1;
+}
+
+.record-memo {
+  font-size: 14px;
+  color: #1f2937;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.record-date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.btn-book {
+  width: 100%;
+  padding: 14px;
+  background: #ffffff;
+  color: #0ea5e9;
+  border: 2px solid #0ea5e9;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.2s;
+}
+
+.btn-book:hover {
+  background: #0ea5e9;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.btn-book:disabled {
+  border-color: #d1d5db;
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* 배송 정보 폼 */
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #1f2937;
+  outline: none;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  border-color: #0ea5e9;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* 완료 화면 */
+.complete-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f1f3;
+  text-align: center;
+}
+
+.complete-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.complete-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.complete-order {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.btn-secondary {
+  padding: 11px 24px;
+  background: #f8fafc;
+  color: #0ea5e9;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #eff6ff;
+  border-color: #0ea5e9;
+  color: #0284c7;
+}
+
+.btn-secondary:disabled {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* 로딩 */
+.loading-screen {
+  text-align: center;
+  padding: 80px 20px;
+  color: #0ea5e9;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+}
